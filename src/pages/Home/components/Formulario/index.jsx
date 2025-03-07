@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
 import { FormularioContainer } from "./styles";
 
 export function Formulario() {
@@ -8,9 +9,16 @@ export function Formulario() {
         watch,
         formState: { errors },
     } = useForm();
+    const [caracteres, setCaracteres] = useState(0)
 
     const onSubmit = (data) => console.log(data);
- 
+
+    useEffect(() => {
+        const nomeValue = watch("nome") || ""; 
+        setCaracteres(nomeValue.length);
+    }, [watch]); 
+
+
 
     return (
         <FormularioContainer>
@@ -64,7 +72,7 @@ export function Formulario() {
                 />
                 {errors.nome && <span>Este campo é obrigatório</span>}
 
-                <span>Caracteres restantes: 0</span>
+                <span>Caracteres restantes: {caracteres}</span>
                 <button type="submit">PESQUISAR</button>
             </form>
         </FormularioContainer>
