@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
-export const FormularioContainer = styled.section`
+export const Container = styled.main`
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    align-items: center;
+`
+
+export const FormularioContainer = styled.form`
     align-self: center;
     width: 90%;
     padding: 2rem;
@@ -42,7 +49,6 @@ export const FormularioContainer = styled.section`
             border: 1px solid ${({theme}) => theme.COLORS.GRAY_200};
             background-color: ${({theme}) => theme.COLORS.WHITE};
         }
-
         
     }
 
@@ -70,5 +76,36 @@ export const FormularioContainer = styled.section`
     
     button:hover{
         background-color: ${({ theme }) => theme.COLORS.BLUE_100};
+    }
+`
+export const ResultadoContainer = styled.section`
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    
+    div{
+        display: flex;
+        align-items: center;
+        
+        h2{
+            margin-right: 5rem;
+            color: ${({ theme }) => theme.COLORS.BLUE_100}
+        }
+        gap: 1rem;
+
+        select{
+            padding: 0.6rem;
+            background: transparent;
+            width: 10%;
+        }
+
+        label{
+            color: ${({ theme }) => theme.COLORS.BLUE_100};
+        }
+    }
+
+    span{
+        margin-top: 1rem;
     }
 `

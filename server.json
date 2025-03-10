@@ -1,0 +1,61 @@
+{
+    "nomeados":[
+        {
+            "id": 1,
+            "nome": "Mario Roberto Souza",
+            "cpf": "000.568.457-56",
+            "data_indicacao": "2023-01-22T19:48:02.008Z",
+            "civil_ou_militar": "Civil",
+            "orgao_de_origem": "PR/MME/ANEEL/PF/Procurador Federal Junto a ANEEL",
+            "orgao_de_destino": "PR/MME/ANEEL/PF/Procurador Federal Junto a ANEEL",
+            "cargo_orgao_origem": "Procurador",
+            "cargo_orgao_destino": "Procurador Geral",
+            "unidade_de_exercicio": "DF", 
+            "nome_do_titular_anterior_do_cargo": "Marcelo Tancredo Neto",
+            "situacao": "Nomeado"
+        },
+        {
+            "id": 2,
+            "nome": "Luís Mario de Souza",
+            "cpf": "000.568.457-56",
+            "data_indicacao": "2023-01-22T19:48:02.008Z",
+            "civil_ou_militar": "Civil",
+            "orgao_de_origem": "PR/MME/ANEEL/PF/Procurador Federal Junto a ANEEL",
+            "orgao_de_destino": "PR/MME/ANEEL/PF/Procurador Federal Junto a ANEEL",
+            "cargo_orgao_origem": "Procurador",
+            "cargo_orgao_destino": "Procurador Geral",
+            "unidade_de_exercicio": "DF", 
+            "nome_do_titular_anterior_do_cargo": "Marcelo Tancredo Neto",
+            "situacao": "Nomeado"
+        },
+        {
+            "id": 3,
+            "nome": "Mario Souza",
+            "cpf": "000.568.457-56",
+            "data_indicacao": "2023-01-22T19:48:02.008Z",
+            "civil_ou_militar": "Civil",
+            "orgao_de_origem": "PR/MME/ANEEL/PF/Procurador Federal Junto a ANEEL",
+            "orgao_de_destino": "PR/MME/ANEEL/PF/Procurador Federal Junto a ANEEL",
+            "cargo_orgao_origem": "Procurador",
+            "cargo_orgao_destino": "Procurador Geral",
+            "unidade_de_exercicio": "DF", 
+            "nome_do_titular_anterior_do_cargo": "Marcelo Tancredo Neto",
+            "situacao": "Nomeado"
+        },
+        {
+            "id": 4,
+            "nome": "Joao Mario de Souza",
+            "cpf": "000.568.457-56",
+            "data_indicacao": "2023-01-22T19:48:02.008Z",
+            "civil_ou_militar": "Civil",
+            "orgao_de_origem": "PR/MME/ANEEL/PF/Procurador Federal Junto a ANEEL",
+            "orgao_de_destino": "PR/MME/ANEEL/PF/Procurador Federal Junto a ANEEL",
+            "cargo_orgao_origem": "Procurador",
+            "cargo_orgao_destino": "Procurador Geral",
+            "unidade_de_exercicio": "DF", 
+            "nome_do_titular_anterior_do_cargo": "Marcelo Tancredo Neto",
+            "situacao": "Nomeado"
+        }
+
+    ]
+}

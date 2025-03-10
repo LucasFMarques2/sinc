@@ -8,8 +8,9 @@
         "@pages/*": ["pages/*"],
         "@storage/*": ["storage/*"],
         "@context/*": ["context/*"],
-        "@services/*": ["services/*"],
-        "@layouts":  ["layouts/*"]
+        "@server/*": ["server/*"],
+        "@layouts":  ["layouts/*"],
+        "@utils": ["utils/*"],
       }
     },
     "include": ["src"]
