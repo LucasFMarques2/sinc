@@ -60,7 +60,6 @@ export const FormularioContainer = styled.div`
     }
 
     button{
-        color: ${({ theme }) => theme.COLORS.WHITE};
         background-color: ${({ theme }) => theme.COLORS.BLUE_200};
 
 
@@ -72,6 +71,12 @@ export const FormularioContainer = styled.div`
 
         cursor: pointer;
         transition: background-color .2s;
+
+    }
+
+
+    button span {
+        color: ${({ theme }) => theme.COLORS.WHITE} !important;
     }
     
     button:hover{
@@ -105,7 +110,4 @@ export const ResultadoContainer = styled.section`
         }
     }
 
-    span{
-        margin-top: 1rem;
-    }
 `

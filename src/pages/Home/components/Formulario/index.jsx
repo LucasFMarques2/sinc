@@ -1,23 +1,44 @@
-import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import { FormularioContainer, Container, ResultadoContainer } from "./styles";
+import { Input, Select, Button } from 'antd';
+
+// Objeto com os labels dinâmicos
+const FIELD_LABELS = {
+  Nome: "Nome",
+  CPF: "CPF",
+  'Civil ou Militar': 'Civil ou Militar',
+  'Órgão de Origem': 'Órgão de Origem',
+  'Órgão de Destino': 'Órgão de Destino',
+  'Cargo Órgão de Destino': 'Cargo Órgão de Destino'
+};
 
 export function Formulario({ onSearch, searchType, resultCount }) {
+  const [caracteres, setCaracteres] = useState(0);
+  const [currentField, setCurrentField] = useState('Nome');
+  
   const {
     register,
     handleSubmit,
     watch,
+    setValue,
     formState: { errors },
   } = useForm();
-  const [caracteres, setCaracteres] = useState(0);
 
   const onSubmit = (data) => {
-    onSearch(data); // envia os dados do formulário para o componente pai (Home)
+    onSearch(data);
   };
 
   useEffect(() => {
-    const nomeValue = watch("nome") || "";
-    setCaracteres(nomeValue.length);
+    const subscription = watch((value, { name }) => {
+      if (name === 'tipo_pesquisa' && value.tipo_pesquisa) {
+        setCurrentField(value.tipo_pesquisa);
+      }
+      if (name === 'nome') {
+        setCaracteres(value.nome?.length || 0);
+      }
+    });
+    return () => subscription.unsubscribe();
   }, [watch]);
 
   return (
@@ -31,75 +52,86 @@ export function Formulario({ onSearch, searchType, resultCount }) {
           <div className="formulario">
             <div>
               <label htmlFor="tipo_pesquisa">Tipo de pesquisa</label>
-              <select
-                {...register("tipo_pesquisa", { required: true })}
+              <Select
                 id="tipo_pesquisa"
+                style={{ width: '100%' }}
+                {...register("tipo_pesquisa", { required: true })}
+                onChange={(value) => setValue('tipo_pesquisa', value)}
               >
-                <option value="">Selecione</option>
-                <option value="Nome">Nome</option>
-                <option value="CPF">CPF</option>
-                <option value="Civil ou Militar">Civil ou Militar</option>
-                <option value="Órgão de Origem">Órgão de Origem</option>
-                <option value="Órgão de Destino">Órgão de Destino</option>
-                <option value="Cargo Órgão de Destino">Cargo Órgão de Destino</option>
-              </select>
+                <Select.Option value="">Selecione</Select.Option>
+                {Object.keys(FIELD_LABELS).map((key) => (
+                  <Select.Option key={key} value={key}>{key}</Select.Option>
+                ))}
+              </Select>
               {errors.tipo_pesquisa && <span>Campo obrigatório</span>}
             </div>
 
             <div>
               <label htmlFor="situacao_cadastral">Situação Cadastral</label>
-              <select
-                {...register("situacao_cadastral", { required: true })}
+              <Select
                 id="situacao_cadastral"
+                style={{ width: '100%' }}
+                {...register("situacao_cadastral")}
+                onChange={(value) => setValue('situacao_cadastral', value)}
               >
-                <option value="">Selecione</option>
-                <option value="Nomeado">Nomeado</option>
-                <option value="Comissionado">Comissionado</option>
-              </select>
-              {errors.situacao_cadastral && <span>Campo obrigatório</span>}
+                <Select.Option value="">Selecione</Select.Option>
+                <Select.Option value="Nomeado">Nomeado</Select.Option>
+                <Select.Option value="Comissionado">Comissionado</Select.Option>
+              </Select>
             </div>
 
             <div>
               <label htmlFor="uf">UF</label>
-              <select {...register("uf", { required: true })} id="uf">
-                <option value="">Escolha o estado</option>
-                <option value="DF">DF</option>
-                <option value="GO">Goiás</option>
-              </select>
-              {errors.uf && <span>Campo obrigatório</span>}
+              <Select
+                id="uf"
+                style={{ width: '100%' }}
+                {...register("uf")}
+                onChange={(value) => setValue('uf', value)}
+              >
+                <Select.Option value="">Escolha o estado</Select.Option>
+                <Select.Option value="DF">DF</Select.Option>
+                <Select.Option value="GO">Goiás</Select.Option>
+              </Select>
             </div>
           </div>
 
-          <label htmlFor="nome">Nome</label>
-          <input
-            type="text"
+          <label htmlFor="nome">{FIELD_LABELS[currentField] || 'Nome'}</label>
+          <Input
             id="nome"
-            placeholder="Nome"
+            placeholder={FIELD_LABELS[currentField] || 'Nome'}
             {...register("nome", { required: true })}
+            onChange={(e) => setValue('nome', e.target.value)}
           />
           {errors.nome && <span>Este campo é obrigatório</span>}
 
           <span>Caracteres restantes: {caracteres}</span>
-          <button type="submit">PESQUISAR</button>
+          <Button 
+            type="primary" 
+            htmlType="submit"
+          >
+            PESQUISAR
+          </Button>
         </form>
       </FormularioContainer>
 
       <ResultadoContainer>
         <div>
           <h2>Resultado da pesquisa</h2>
-          <label htmlFor="ordenar">Ordenar por</label>
-          <select id="ordenar">
-            <option value={searchType}>
-              {searchType ? searchType : "Nome"}
-            </option>
-          </select>
+          <Select
+            id="ordenar"
+            value={searchType || 'Nome'}
+            style={{ width: 200 }}
+          >
+            <Select.Option value={searchType || 'Nome'}>
+              {searchType || 'Nome'}
+            </Select.Option>
+          </Select>
         </div>
-        {resultCount > 0 && ( 
-            <span>
-              Foram encontrados <strong>{resultCount}</strong> resultados
-            </span>
+        {resultCount > 0 && (
+          <span>
+            Foram encontrados <strong>{resultCount}</strong> resultados
+          </span>
         )}
-      
       </ResultadoContainer>
     </Container>
   );

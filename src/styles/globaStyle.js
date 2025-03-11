@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
     }
 
-    body, input-security, textArea, button{
+    body, input, textArea, button{
         font: 400 1.6rem Raleway, sans-serif;
         -webkit-font-smoothing: antialised;
     }
