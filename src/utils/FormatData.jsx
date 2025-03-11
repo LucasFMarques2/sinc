@@ -1,3 +1,3 @@
 export const formatarData = (dataISO) => {
-    return new Date(dataISO).toLocaleDateString('pt-BR')
+  return new Date(dataISO).toLocaleDateString('pt-BR')
 }

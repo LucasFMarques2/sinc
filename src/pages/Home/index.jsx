@@ -1,20 +1,20 @@
-import { useState, useContext } from "react";
-import { HomeContainer, TabelaContainer, TabelaWrapper } from "./styles";
-import { Formulario } from "@components/Formulario";
-import { TabelaNomeadosContext } from "@context/TabelaNomeadosContext";
-import { formatarData } from "@utils/FormatData";
-import { maskCPF } from "../../utils/masKCPF";
-import { Header } from "@components/header";
-import { Table, Button } from 'antd';
-import { InfoCircleOutlined } from '@ant-design/icons';
+import { useState, useContext } from "react"
+import { HomeContainer, TabelaContainer, TabelaWrapper } from "./styles"
+import { Formulario } from "@components/Formulario"
+import { TabelaNomeadosContext } from "@context/TabelaNomeadosContext"
+import { formatarData } from "@utils/FormatData"
+import { maskCPF } from "../../utils/masKCPF"
+import { Header } from "@components/header"
+import { Table, Button } from 'antd'
+import { InfoCircleOutlined } from '@ant-design/icons'
 
 export function Home() {
-  const { nomeados } = useContext(TabelaNomeadosContext);
-  const [filteredResults, setFilteredResults] = useState(null);
-  const [searchType, setSearchType] = useState("");
+  const { nomeados } = useContext(TabelaNomeadosContext)
+  const [filteredResults, setFilteredResults] = useState(null)
+  const [searchType, setSearchType] = useState("")
 
   const handleSearch = (data) => {
-    setSearchType(data.tipo_pesquisa);
+    setSearchType(data.tipo_pesquisa)
   
     const mapping = {
       Nome: "nome",
@@ -23,10 +23,10 @@ export function Home() {
       'Órgão de Origem': "orgao_de_origem",
       'Órgão de Destino': "orgao_de_destino",
       'Cargo Órgão de Destino': "cargo_orgao_destino",
-    };
+    }
   
-    const field = mapping[data.tipo_pesquisa];
-    let results = nomeados;
+    const field = mapping[data.tipo_pesquisa]
+    let results = nomeados
   
     if (field && data.nome) {
       results = results.filter(item =>
@@ -43,8 +43,8 @@ export function Home() {
         item.uf === data.uf)
     }
   
-    setFilteredResults(results);
-  };
+    setFilteredResults(results)
+  }
 
 
   const columns = [
@@ -104,7 +104,7 @@ export function Home() {
         />
       ),
     },
-  ];
+  ]
   
 
   return (
@@ -134,5 +134,5 @@ export function Home() {
         </TabelaWrapper>
       )}
     </HomeContainer>
-  );
+  )
 }

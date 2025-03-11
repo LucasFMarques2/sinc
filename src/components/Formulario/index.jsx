@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { FormularioContainer, Container, ResultadoContainer } from "./styles";
-import { Input, Select, Button } from 'antd';
+import { useEffect, useState } from "react"
+import { useForm } from "react-hook-form"
+import { FormularioContainer, Container, ResultadoContainer } from "./styles"
+import { Input, Select, Button } from 'antd'
 
 // Objeto com os labels dinâmicos
 const FIELD_LABELS = {
@@ -11,11 +11,11 @@ const FIELD_LABELS = {
   'Órgão de Origem': 'Órgão de Origem',
   'Órgão de Destino': 'Órgão de Destino',
   'Cargo Órgão de Destino': 'Cargo Órgão de Destino'
-};
+}
 
 export function Formulario({ onSearch, searchType, resultCount }) {
-  const [caracteres, setCaracteres] = useState(0);
-  const [currentField, setCurrentField] = useState('Nome');
+  const [caracteres, setCaracteres] = useState(0)
+  const [currentField, setCurrentField] = useState('Nome')
   
   const {
     register,
@@ -23,23 +23,23 @@ export function Formulario({ onSearch, searchType, resultCount }) {
     watch,
     setValue,
     formState: { errors },
-  } = useForm();
+  } = useForm()
 
   const onSubmit = (data) => {
-    onSearch(data);
-  };
+    onSearch(data)
+  }
 
   useEffect(() => {
     const subscription = watch((value, { name }) => {
       if (name === 'tipo_pesquisa' && value.tipo_pesquisa) {
-        setCurrentField(value.tipo_pesquisa);
+        setCurrentField(value.tipo_pesquisa)
       }
       if (name === 'nome') {
-        setCaracteres(value.nome?.length || 0);
+        setCaracteres(value.nome?.length || 0)
       }
-    });
-    return () => subscription.unsubscribe();
-  }, [watch]);
+    })
+    return () => subscription.unsubscribe()
+  }, [watch])
 
   return (
     <Container>
@@ -134,5 +134,5 @@ export function Formulario({ onSearch, searchType, resultCount }) {
         )}
       </ResultadoContainer>
     </Container>
-  );
+  )
 }

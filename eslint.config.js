@@ -28,6 +28,12 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      // Configura para não obrigar o uso de ponto-e-vírgula
+      'semi': ['error', 'never'],
+      // Configura a indentação com 2 espaços
+      'indent': ['error', 2, { SwitchCase: 1 }],
+      // Remove pontos-e-vírgula desnecessários
+      'no-extra-semi': 'error'
     },
   },
 ]

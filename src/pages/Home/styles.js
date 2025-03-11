@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const HomeContainer = styled.main`
     display: flex;
@@ -11,7 +11,7 @@ export const HomeContainer = styled.main`
         margin-top: 5rem;
         font-weight: 500;
     }
-`;
+`
 
 
 
@@ -30,7 +30,7 @@ export const TabelaWrapper = styled.div`
         border-top-right-radius: 8px;
         border-bottom: none;
     }
-`;
+`
 
 export const TabelaContainer = styled.table`
     width: 100%;
@@ -85,4 +85,4 @@ export const TabelaContainer = styled.table`
             background-color: #0056b3;
         }
     }
-`;
+`
