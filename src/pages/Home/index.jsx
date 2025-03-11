@@ -1,5 +1,5 @@
 import { useState, useContext } from "react"
-import { HomeContainer, TabelaContainer, TabelaWrapper } from "./styles"
+import { HomeContainer, TabelaWrapper } from "./styles"
 import { Formulario } from "@components/Formulario"
 import { TabelaNomeadosContext } from "@context/TabelaNomeadosContext"
 import { formatarData } from "@utils/FormatData"
