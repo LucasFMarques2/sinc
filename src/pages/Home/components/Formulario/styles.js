@@ -7,7 +7,7 @@ export const Container = styled.main`
     align-items: center;
 `
 
-export const FormularioContainer = styled.form`
+export const FormularioContainer = styled.div`
     align-self: center;
     width: 90%;
     padding: 2rem;

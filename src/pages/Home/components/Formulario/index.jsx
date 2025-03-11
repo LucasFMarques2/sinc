@@ -1,92 +1,106 @@
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
-import { FormularioContainer, Container, ResultadoContainer} from "./styles";
+import { FormularioContainer, Container, ResultadoContainer } from "./styles";
 
-export function Formulario() {
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-    } = useForm();
-    const [caracteres, setCaracteres] = useState(0)
+export function Formulario({ onSearch, searchType, resultCount }) {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const [caracteres, setCaracteres] = useState(0);
 
-    const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    onSearch(data); // envia os dados do formulário para o componente pai (Home)
+  };
 
-    useEffect(() => {
-        const nomeValue = watch("nome") || ""; 
-        setCaracteres(nomeValue.length);
-    }, [watch]); 
+  useEffect(() => {
+    const nomeValue = watch("nome") || "";
+    setCaracteres(nomeValue.length);
+  }, [watch]);
 
+  return (
+    <Container>
+      <FormularioContainer>
+        <span>
+          Preencha os campos abaixo com os dados solicitados e clique em "Pesquisar"
+        </span>
 
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="formulario">
+            <div>
+              <label htmlFor="tipo_pesquisa">Tipo de pesquisa</label>
+              <select
+                {...register("tipo_pesquisa", { required: true })}
+                id="tipo_pesquisa"
+              >
+                <option value="">Selecione</option>
+                <option value="Nome">Nome</option>
+                <option value="CPF">CPF</option>
+                <option value="Civil ou Militar">Civil ou Militar</option>
+                <option value="Órgão de Origem">Órgão de Origem</option>
+                <option value="Órgão de Destino">Órgão de Destino</option>
+                <option value="Cargo Órgão de Destino">Cargo Órgão de Destino</option>
+              </select>
+              {errors.tipo_pesquisa && <span>Campo obrigatório</span>}
+            </div>
 
-    return (
-        <Container>
-            <FormularioContainer>
-                <span>
-                    Preencha os campos abaixo com os dados solicitados e clique em "Pesquisar"
-                </span>
+            <div>
+              <label htmlFor="situacao_cadastral">Situação Cadastral</label>
+              <select
+                {...register("situacao_cadastral", { required: true })}
+                id="situacao_cadastral"
+              >
+                <option value="">Selecione</option>
+                <option value="Nomeado">Nomeado</option>
+                <option value="Comissionado">Comissionado</option>
+              </select>
+              {errors.situacao_cadastral && <span>Campo obrigatório</span>}
+            </div>
 
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="formulario">
-                        <div>
-                            <label htmlFor="tipo_pesquisa">Tipo de pesquisa</label>
-                            <select {...register("tipo_pesquisa", { required: true })} id="tipo_pesquisa">
-                                <option value="">Selecione</option>
-                                <option value="Nome">Nome</option>
-                                <option value="CPF">CPF</option>
-                                <option value="Civil ou Militar">Civil ou Militar</option>
-                                <option value="Órgão de Origem">Órgão de Origem</option>
-                                <option value="Órgão de Destino">Órgão de Destino</option>
-                                <option value="Cargo Órgão de Destino">Cargo Órgão de Destino</option>
-                            </select>
-                            {errors.tipo_pesquisa && <span>Campo obrigatório</span>}
-                        </div>
+            <div>
+              <label htmlFor="uf">UF</label>
+              <select {...register("uf", { required: true })} id="uf">
+                <option value="">Escolha o estado</option>
+                <option value="DF">DF</option>
+                <option value="GO">Goiás</option>
+              </select>
+              {errors.uf && <span>Campo obrigatório</span>}
+            </div>
+          </div>
 
-                        <div>
-                            <label htmlFor="situacao_cadastral">Situação Cadastral</label>
-                            <select {...register("situacao_cadastral", { required: true })} id="situacao_cadastral">
-                                <option value="">Selecione</option>
-                                <option value="Nomeado">Nomeado</option>
-                                <option value="Comissionado">Comissionado</option>
-                            </select>
-                            {errors.situacao_cadastral && <span>Campo obrigatório</span>}
-                        </div>
+          <label htmlFor="nome">Nome</label>
+          <input
+            type="text"
+            id="nome"
+            placeholder="Nome"
+            {...register("nome", { required: true })}
+          />
+          {errors.nome && <span>Este campo é obrigatório</span>}
 
-                        <div>
-                            <label htmlFor="uf">UF</label>
-                            <select {...register("uf", { required: true })} id="uf">
-                                <option value="">Escolha o estado</option>
-                                <option value="DF">DF</option>
-                                <option value="GO">Goiás</option>
-                            </select>
-                            {errors.uf && <span>Campo obrigatório</span>}
-                        </div>
-                    </div>
+          <span>Caracteres restantes: {caracteres}</span>
+          <button type="submit">PESQUISAR</button>
+        </form>
+      </FormularioContainer>
 
-                    <label htmlFor="nome">Nome</label>
-                    <input
-                        type="text"
-                        id="nome"
-                        placeholder="Nome"
-                        {...register("nome", { required: true })}
-                    />
-                    {errors.nome && <span>Este campo é obrigatório</span>}
-
-                    <span>Caracteres restantes: {caracteres}</span>
-                    <button type="submit">PESQUISAR</button>
-                </form>
-            </FormularioContainer>
-            <ResultadoContainer>
-                <div>
-                    <h2>Resultado da pesquisa</h2>
-                    <label htmlFor="">Ordenar por</label>
-                    <select name="" id="">
-                        <option value="">Nome</option>
-                    </select>
-                </div>
-                <span>Foram encontrados <strong>5 resultados</strong></span>
-            </ResultadoContainer>
-        </Container>
-    );
+      <ResultadoContainer>
+        <div>
+          <h2>Resultado da pesquisa</h2>
+          <label htmlFor="ordenar">Ordenar por</label>
+          <select id="ordenar">
+            <option value={searchType}>
+              {searchType ? searchType : "Nome"}
+            </option>
+          </select>
+        </div>
+        {resultCount > 0 && ( 
+            <span>
+              Foram encontrados <strong>{resultCount}</strong> resultados
+            </span>
+        )}
+      
+      </ResultadoContainer>
+    </Container>
+  );
 }
