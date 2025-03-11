@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
 import { HomeContainer, TabelaContainer, TabelaWrapper } from "./styles";
-import { Formulario } from "./components/Formulario";
+import { Formulario } from "@components/Formulario";
 import { TabelaNomeadosContext } from "@context/TabelaNomeadosContext";
-import { formatarData } from "../../utils/FormatData";
+import { formatarData } from "@utils/FormatData";
 import { maskCPF } from "../../utils/masKCPF";
 import { Header } from "@components/header";
 import { Table, Button } from 'antd';
