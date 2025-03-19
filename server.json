@@ -12,7 +12,58 @@
         "cargo_orgao_destino": "Procuradora Geral",
         "unidade_de_exercicio": "SP",
         "nome_do_titular_anterior_do_cargo": "Carlos Eduardo Lima",
-        "situacao": "Nomeado"
+        "situacao": "Nomeado",
+        "historico_movimentacao": [
+          {
+            "id": 1,
+            "data_atualizacao": "2023-02-15T10:30:00.000Z",
+            "situacao": "nomeado",
+            "orgao": "PR/MEC/UFCG/PROJUR-FFCG",
+            "cargo": "Procurador",
+            "pesquisas_associadas_na_data_da_indicacao": [
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "Comitê de Ética",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": true, 
+                "lista_de_pendencia": [
+                  {
+                    "id": 1,
+                    "orgao": "PR/ME/CAIXA",
+                    "data_de_aplicacao_da_sansao": "2023-02-15T10:30:00.000Z",
+                    "vigencia_da_sasao": "2023-02-15T10:30:00.000Z",
+                    "sansao_aplicada": "censura etica",
+                    "fundamentos": "RH103.Resolucao CEP n 10/2008",
+                    "contuda_praticada": "Abordagem ameaãdora",
+                    "comssao_de_etica_responsavel": "Comissão de ética do órgão ou Entidade"
+                  },
+                  {
+                    "id": 2,
+                    "orgao": "PR",
+                    "data_de_aplicacao_da_sansao": "2023-02-15T10:30:00.000Z",
+                    "vigencia_da_sasao": "2023-02-15T10:30:00.000Z",
+                    "sansao_aplicada": "censura etica",
+                    "fundamentos": "RH103.Resolucao CEP n 10/2008",
+                    "contuda_praticada": "Agente optou por nao cumprir a orienatacao direta",
+                    "comssao_de_etica_responsavel": "Comissão de ética do órgão ou Entidade"
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "orgao_responsave_pesquisa": "ABIN",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "CGU",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 2,
@@ -26,7 +77,54 @@
         "cargo_orgao_destino": "Chefe de Logística",
         "unidade_de_exercicio": "RJ",
         "nome_do_titular_anterior_do_cargo": "Marcelo Tancredo Neto",
-        "situacao": "Nomeado"
+        "situacao": "Nomeado",
+        "historico_movimentacao": [
+          {
+            "id": 1,
+            "data_atualizacao": "2023-02-15T10:30:00.000Z",
+            "situacao": "nomeado",
+            "orgao": "PR/MEC/UFCG/PROJUR-FFCG",
+            "cargo": "Procurador",
+            "pesquisas_associadas_na_data_da_indicacao": [
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "Comitê de Ética",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 2,
+                "orgao_responsave_pesquisa": "ABIN",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": true,
+                "lista_de_pendencia": [
+                  {
+                    "id": 1,
+                    "orgao": "PR/ME/CAIXA",
+                    "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                    "numerdo_do_documento": "Censura Etica",
+                    "tipo_de_regristro": "Judicial",
+                    "detalhes_da_pendencia": "Triunal_regional"
+                  },
+                  {
+                    "id": 2,
+                    "orgao": "PR/ME/CAIXA",
+                    "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                    "numerdo_do_documento": "Censura Etica",
+                    "tipo_de_regristro": "Judicial",
+                    "detalhes_da_pendencia": "Triunal_regional"
+                  }
+                ]
+              },
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "CGU",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 3,
@@ -40,7 +138,36 @@
         "cargo_orgao_destino": "Diretora de Fiscalização",
         "unidade_de_exercicio": "DF",
         "nome_do_titular_anterior_do_cargo": "Luciana Gomes Pereira",
-        "situacao": "Nomeado"
+        "situacao": "Nomeado",
+        "historico_movimentacao": [
+          {
+            "id": 1,
+            "data_atualizacao": "2023-02-15T10:30:00.000Z",
+            "situacao": "nomeado",
+            "orgao": "PR/MEC/UFCG/PROJUR-FFCG",
+            "cargo": "Procurador",
+            "pesquisas_associadas_na_data_da_indicacao": [
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "Comitê de Ética",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 2,
+                "orgao_responsave_pesquisa": "ABIN",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "CGU",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 4,
@@ -54,7 +181,36 @@
         "cargo_orgao_destino": "Diretor de Ensino",
         "unidade_de_exercicio": "SP",
         "nome_do_titular_anterior_do_cargo": "Fernando de Oliveira",
-        "situacao": "Nomeado"
+        "situacao": "Nomeado",
+        "historico_movimentacao": [
+          {
+            "id": 1,
+            "data_atualizacao": "2023-02-15T10:30:00.000Z",
+            "situacao": "nomeado",
+            "orgao": "PR/MEC/UFCG/PROJUR-FFCG",
+            "cargo": "Procurador",
+            "pesquisas_associadas_na_data_da_indicacao": [
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "Comitê de Ética",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 2,
+                "orgao_responsave_pesquisa": "ABIN",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "CGU",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 5,
@@ -68,7 +224,36 @@
         "cargo_orgao_destino": "Comandante de Operações",
         "unidade_de_exercicio": "RJ",
         "nome_do_titular_anterior_do_cargo": "Lucas Henrique Santos",
-        "situacao": "Nomeado"
+        "situacao": "Nomeado",
+        "historico_movimentacao": [
+          {
+            "id": 1,
+            "data_atualizacao": "2023-02-15T10:30:00.000Z",
+            "situacao": "nomeado",
+            "orgao": "PR/MEC/UFCG/PROJUR-FFCG",
+            "cargo": "Procurador",
+            "pesquisas_associadas_na_data_da_indicacao": [
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "Comitê de Ética",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 2,
+                "orgao_responsave_pesquisa": "ABIN",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "CGU",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 6,
@@ -82,7 +267,36 @@
         "cargo_orgao_destino": "Comandante de Operações",
         "unidade_de_exercicio": "RJ",
         "nome_do_titular_anterior_do_cargo": "Lucas Henrique Santos",
-        "situacao": "Nomeado"
+        "situacao": "Nomeado",
+        "historico_movimentacao": [
+          {
+            "id": 1,
+            "data_atualizacao": "2023-02-15T10:30:00.000Z",
+            "situacao": "nomeado",
+            "orgao": "PR/MEC/UFCG/PROJUR-FFCG",
+            "cargo": "Procurador",
+            "pesquisas_associadas_na_data_da_indicacao": [
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "Comitê de Ética",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 2,
+                "orgao_responsave_pesquisa": "ABIN",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "CGU",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              }
+            ]
+          }
+        ]
       }, 
       {
         "id": 7,
@@ -96,10 +310,39 @@
         "cargo_orgao_destino": "Comandante de Operações",
         "unidade_de_exercicio": "GO",
         "nome_do_titular_anterior_do_cargo": "Lucas Henrique Santos",
-        "situacao": "Nomeado"
+        "situacao": "Nomeado",
+        "historico_movimentacao": [
+          {
+            "id": 1,
+            "data_atualizacao": "2023-02-15T10:30:00.000Z",
+            "situacao": "nomeado",
+            "orgao": "PR/MEC/UFCG/PROJUR-FFCG",
+            "cargo": "Procurador",
+            "pesquisas_associadas_na_data_da_indicacao": [
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "Comitê de Ética",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 2,
+                "orgao_responsave_pesquisa": "ABIN",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              },
+              {
+                "id": 1,
+                "orgao_responsave_pesquisa": "CGU",
+                "data_da_pesquisa": "2023-02-15T10:30:00.000Z",
+                "possui_pendencias": false
+              }
+            ]
+          }
+        ]
       }
     ],
-    "estados": [
+   "estados": [
       { "id": 1, "nome": "Acre", "sigla": "AC" },
       { "id": 2, "nome": "Alagoas", "sigla": "AL" },
       { "id": 3, "nome": "Amapá", "sigla": "AP" },
@@ -127,28 +370,29 @@
       { "id": 25, "nome": "São Paulo", "sigla": "SP" },
       { "id": 26, "nome": "Sergipe", "sigla": "SE" },
       { "id": 27, "nome": "Tocantins", "sigla": "TO" }
-    ],
-    "nomCamposBusca": [
-      {
-        "id": 1,
-        "valor": "Nome"
-      },
-      {
-        "id": 2,
-        "valor":"CPF"
-      },
-      {
-        "id": 3,
-        "valor": "Civil ou Militar"
-      },
-      {
-        "id": 4,
-        "valor": "Órgão de Destino"
-      },
-      {
-        "id": 5,
-        "valor": "Cargo Órgão de Destino"
-      }
-    ]
+   ],
+   "nomCamposBusca": [
+    {
+      "id": 1,
+      "valor": "Nome"
+    },
+    {
+      "id": 2,
+      "valor": "CPF"
+    },
+    {
+      "id": 3,
+      "valor": "Civil ou Militar"
+    },
+    {
+      "id": 4,
+      "valor": "Órgão de Destino"
+    },
+    {
+      "id": 5,
+      "valor": "Cargo Órgão de Destino"
+    }
+   ]
+
   }
   

@@ -19,8 +19,7 @@ export const TabelaWrapper = styled.div`
     width: 90%;
     align-self: center;
     margin-top: 1.5rem;
-    max-height: 400px; /* Ajuste conforme necessário */
-    overflow-y: auto;
+    margin-bottom: 7rem;
 
     h2 {
         font-size: 1.2rem;

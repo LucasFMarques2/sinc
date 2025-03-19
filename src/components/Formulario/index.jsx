@@ -99,7 +99,7 @@ export function Formulario({ onSearch, resultCount }) {
         {resultCount > 0 && (
           <span>
             {resultCount === 1 ? "Foi encontrado " : "Foram encontrados "}
-            <strong>{resultCount}</strong> resultado{resultCount === 1 ? "" : "s"}
+            <strong>{resultCount} resultado{resultCount === 1 ? "" : "s"}</strong> 
           </span>
         )}
       </ResultadoContainer>
