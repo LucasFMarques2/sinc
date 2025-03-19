@@ -33,4 +33,8 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialised;
     }
 
+    input:placeholder{
+        color: red;
+    }
+
 `

@@ -7,7 +7,7 @@
       "@routes/*": ["routes/*"],
       "@pages/*": ["pages/*"],
       "@context/*": ["context/*"],
-      "@server*": ["server/*"],   
+      "@server/*": ["server/*"],   
       "@utils/*": ["utils/*"],      
       "@styles/*": ["styles/*"]
     }

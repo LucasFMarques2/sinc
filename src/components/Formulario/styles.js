@@ -15,6 +15,13 @@ export const FormularioContainer = styled.div`
     margin-top: 3rem;
     background: ${({theme}) => theme.COLORS.GRAY_100};
 
+    .errosAndCaracter{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
     label{
         color: ${({theme}) => theme.COLORS.BLUE_100};
     }
@@ -49,7 +56,6 @@ export const FormularioContainer = styled.div`
             border: 1px solid ${({theme}) => theme.COLORS.GRAY_200};
             background-color: ${({theme}) => theme.COLORS.WHITE};
         }
-        
     }
 
     input{

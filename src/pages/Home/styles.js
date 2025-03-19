@@ -19,16 +19,18 @@ export const TabelaWrapper = styled.div`
     width: 90%;
     align-self: center;
     margin-top: 1.5rem;
+    max-height: 400px; /* Ajuste conforme necessário */
+    overflow-y: auto;
 
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         background-color: ${({ theme }) => theme.COLORS.GRAY_200};
         font-weight: 500;
-        padding: 1rem 1rem;
+        padding: 0.8rem 1rem;
         border: 1px solid #e0e0e0;  
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         border-bottom: none;
     }
-`
 
+`
